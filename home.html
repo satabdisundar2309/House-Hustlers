@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="home.css" />
+  <script src="data.js" type="module" defer></script>
+  <script src="home.js" defer></script>
+
+</head>
+
+<body>
+  <section class="top">
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./Images/projectLogo.png" alt="" height="42" />
+        </div>
+        <div class="logout-section">
+          <div class="user-image" onclick="openModal()">
+            <img src="./Images/user.png" alt="" height="42" />
+          </div>
+          <div class="logout" onclick="openModal2()">
+            <button>
+              Logout <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="top-container">
+      <div class="top-container-search">
+        <div class="box1">
+          <input type="text" placeholder="Search by location e.g. nayapalli" />
+        </div>
+        <div class="search-btn">
+          <button class="sbtn1">
+            Search <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="sbtn2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="alert">
+          <img src="./Images/caution.png" height="20" alt="">
+          <p>Choose All Preferences</p>
+        </div>
+        <div class="filter-container">
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected gender">Gender</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">Female</li>
+              <li>Male</li>
+              <li>Male/Female</li>
+              <li>Others</li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected category">Category</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">Student</li>
+              <li>Bachelor</li>
+              <li>Family</li>
+              <li>Others</li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected type">Type</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">Hostel</li>
+              <li>PG</li>
+              <li>Single Room</li>
+              <li>1 BHK</li>
+              <li>2 BHK</li>
+              <li>3 BHK</li>
+              <li>Others</li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            
+            <div class="select">
+              <span class="selected tenants">Tenants</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>More</li>
+            </ul>
+          </div>
+
+          <!-- <div class="dropdown">
+            <div class="select">
+              <span class="selected">Gender</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">Female</li>
+              <li>Male</li>
+              <li>Others</li>
+            </ul>
+          </div> -->
+        </div>
+
+        <div class="range-container">
+          <h1>Choose Price Range</h1>
+          <input type="range" min="0" max="10000" step="100" value="0" class="range-slider" id="myRange" />
+          <div class="price-limit">
+            <p>₹ 0</p>
+            <p>₹ 10 000</p>
+          </div>
+          <p class="price-tag">Price: ₹ <span id="price"></span></p>
+          <div class="final-search">
+            <p>Search</p>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="all-datas">
+    <div class="all-data-boxes">
+      <div class="data-box">
+        <div class="room-img">
+          <img src="./Images/room2.jpg" alt="Room-Image">
+        </div>
+        <div class="price-details">
+          <p>Price: <span>₹8000</span></p>
+          <p>Type: 2 BHK</p>
+          <p>Category: Others</p>
+          <p>Gender: Male/Female</p>
+        </div>
+        <div class="owner-details">
+          <p>Owner: Rajkishore Maharana</p>
+          <p><i class="fa-solid fa-phone"></i> 8112191246</p>
+          <p><i class="fa-solid fa-location-dot"></i> Nayapalli</p>
+          <p><a href="https://maps.app.goo.gl/83eaVE3DWg3JKuBX8" target="_blank"><i
+                class="fa-solid fa-map-location-dot"></i> Nearby Location</a></p>
+        </div>
+
+      </div>
+      <div class="data-box">
+        <div class="room-img">
+          <img src="./Images/room4.jpg" alt="Room-Image">
+        </div>
+        <div class="price-details">
+          <p>Price: <span>₹8000</span></p>
+          <p>Type: 2 BHK</p>
+          <p>Category: Student</p>
+          <p>Gender: Female</p>
+        </div>
+        <div class="owner-details">
+          <p>Owner: Mahani Behera</p>
+          <p><i class="fa-solid fa-phone"></i> 8984692040</p>
+          <p><i class="fa-solid fa-location-dot"></i> Nayapalli</p>
+          <p><a href="https://maps.app.goo.gl/BeycmUT77PmEizJQ6" target="_blank"><i
+                class="fa-solid fa-map-location-dot"></i> Nearby Location</a></p>
+        </div>
+
+      </div>
+      <div class="data-box">
+        <div class="room-img">
+          <img src="./Images/room6.jpg" alt="Room-Image">
+        </div>
+        <div class="price-details">
+          <p>Price: <span>₹4000</span></p>
+          <p>Type: 1 BHK</p>
+          <p>Category: Student</p>
+          <p>Gender: Male</p>
+        </div>
+        <div class="owner-details">
+          <p>Owner: Goutam Behera</p>
+          <p><i class="fa-solid fa-phone"></i> 8144454030</p>
+          <p><i class="fa-solid fa-location-dot"></i> Nayapalli</p>
+          <p><a href="https://maps.app.goo.gl/itWQmtR9qHykhcCD6" target="_blank"><i
+                class="fa-solid fa-map-location-dot"></i> Nearby Location</a></p>
+        </div>
+
+      </div>
+      <div class="data-box">
+        <div class="room-img">
+          <img src="./Images/room20.webp" alt="Room-Image">
+        </div>
+        <div class="price-details">
+          <p>Price: <span>₹20000</span></p>
+          <p>Type: 3 BHK</p>
+          <p>Category: Family</p>
+          <p>Gender: Male/Female</p>
+        </div>
+        <div class="owner-details">
+          <p>Owner: Pitambar Garabadu</p>
+          <p><i class="fa-solid fa-phone"></i> 7978203511</p>
+          <p><i class="fa-solid fa-location-dot"></i> Saheed Nagar</p>
+          <p><a href="https://maps.app.goo.gl/7jSAPqntQp1jmMWTA" target="_blank"><i
+                class="fa-solid fa-map-location-dot"></i> Nearby Location</a></p>
+        </div>
+
+      </div>
+      <div class="data-box">
+        <div class="room-img">
+          <img src="./Images/room38.jpg" alt="Room-Image">
+        </div>
+        <div class="price-details">
+          <p>Price: <span>₹7000</span></p>
+          <p>Type: 1 BHK</p>
+          <p>Category: Family</p>
+          <p>Gender: Male/Female</p>
+        </div>
+        <div class="owner-details">
+          <p>Owner: Er Sanjeevani mahala</p>
+          <p><i class="fa-solid fa-phone"></i> 7847829336</p>
+          <p><i class="fa-solid fa-location-dot"></i> Bhauma Nagar</p>
+          <p><a href="https://maps.app.goo.gl/VJm1FQdrTAAwbJiz6" target="_blank"><i
+                class="fa-solid fa-map-location-dot"></i> Nearby Location</a></p>
+        </div>
+
+      </div>
+      <div class="data-box">
+        <div class="room-img">
+          <img src="./Images/room5.jpg" alt="Room-Image">
+        </div>
+        <div class="price-details">
+          <p>Price: <span>₹10000</span></p>
+          <p>Type: 2 BHK</p>
+          <p>Category: Family</p>
+          <p>Gender: Male</p>
+        </div>
+        <div class="owner-details">
+          <p>Owner: Rajesh Behera</p>
+          <p><i class="fa-solid fa-phone"></i> 9556563548</p>
+          <p><i class="fa-solid fa-location-dot"></i> Nayapalli</p>
+          <p><a href="https://maps.app.goo.gl/BP9KqSejCKL716ix6" target="_blank"><i
+                class="fa-solid fa-map-location-dot"></i> Nearby Location</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="errorMsg">
+      <div class="errImg">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGEzbTFqdHVwajhvYjIzb3Izb2Z0ZjdwMWdnbnBmZmhvcnN3cXlwbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/KOfp5sCYol4S4/giphy.gif" alt="Data Not Found" />
+      </div>
+      <p class="errMsg">Oooooops, No Data Found!!!</p>
+</div>
+  </section>
+  <!-- pop-up modal 1 -->
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Update Profile</h3>
+      <div>
+        <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
+      </div>
+    </div>
+    <div class="profile-photo-container">
+      <div class="view-img">
+        <img src="./Images/user.png" height="100" alt="" />
+      </div>
+
+      <div class="choose-img">
+        <button><i class="fa-solid fa-camera"></i></button>
+        <input type="file" name="" id="" accept="image/*" hidden />
+      </div>
+    </div>
+
+    <div class="info-edit">
+      <div class="newName info-edit-input">
+        <label for="newName">Edit Name</label>
+        <input type="text" name="newName" id="newName">
+        <i class="fa-solid fa-pencil info-edit-icon"></i>
+      </div>
+      <div class="newNumber info-edit-input">
+        <label for="newNumber">Edit Phone Number</label>
+        <input type="number" name="newNumber" id="newNumber">
+        <i class="fa-solid fa-pencil info-edit-icon"></i>
+      </div>
+      <div class="newEmail info-edit-input">
+        <label for="newEmail">Edit Email Address</label>
+        <input type="text" name="newEmail" id="newEmail">
+        <i class="fa-solid fa-pencil info-edit-icon"></i>
+      </div>
+      <div class="info-edit-update">
+        <p>Update</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay  -->
+  <div onclick="closeModal()" class="overlay"></div>
+
+  <!-- pop up modal 2 -->
+  <div class="modal2">
+    <h2>Log Out</h2>
+    <p>Are you sure you want to log out?</p>
+    <div class="final-logout">
+      <button onclick="closeModal2()" class="No-logout">No</button>
+      <button class="Yes-logout"><a href="#">Yes</a></button>
+    </div>
+  </div>
+  <!-- Overlay2  -->
+  <div onclick="closeModal2()" class="overlay2"></div>
+
+  <!-- Testimonial section -->
+  <section class="testimony testimonial__outer">
+    <section class="testimonials__container mySwiper">
+      <div class="testimonial__inner swiper-wrapper">
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial01.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Pragati Suar</h5>
+            <small>2001326086</small>
+            <h6>(Report and Documentations)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Pragati Suar. I've handled some parts of the
+              documentation of this project called 'Rental Room Management
+              System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial02.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Pratyush Bhanja</h5>
+            <small>2001326032</small>
+            <h6>(Report and Documentations)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Pratyush Bhanja. I've handled some parts of the
+              documentation of this project called 'Rental Room Management
+              System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial04.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Snehal Majhi</h5>
+            <small>2001326104</small>
+            <h6>(UI Design)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Snehal Majhi. I've handled the UI designing role of
+              this project called 'Rental Room Management System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial05.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Ashutosh Mallik</h5>
+            <small>2001326054</small>
+            <h6>(Data Accumulation)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Ashutosh Mallik. I've handled the data gathering role
+              of this project called 'Rental Room Management System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial06.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Asit Moharana</h5>
+            <small>2001326055</small>
+            <h6>(Data Accumulation)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Asit Moharana. I've handled the data gathering role of
+              this project called 'Rental Room Management System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial07.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Sambit Barik</h5>
+            <small>2001326097</small>
+            <h6>(Data Accumulation)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Sambit Barik. I've handled the data gathering role of
+              this project called 'Rental Room Management System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial08.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Subhrajit Dhal</h5>
+            <small>2001326043</small>
+            <h6>(Data Accumulation)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Subhrajit Dhal. I've handled the data gathering role
+              of this project called 'Rental Room Management System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial09.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Soubhagya Majhi</h5>
+            <small>2001326106</small>
+            <h6>(Data Accumulation)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Soubhagya Majhi. I've handled the data gathering role
+              of this project called 'Rental Room Management System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial03.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Rajkishor Das</h5>
+            <small>2001326092</small>
+            <h6>(Design and Developement)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Rajkishor Das. I've handled the UI design and
+              developement part of this project called 'Rental Room Management
+              System'.
+            </p>
+          </div>
+        </article>
+        <article class="testimonial swiper-slide">
+          <div class="avatar">
+            <img src="./Images/Testimonial10.jpg" alt="" class="img" />
+          </div>
+          <div class="testimonial__info">
+            <h5>Satabdisundar Behera</h5>
+            <small>2001326101</small>
+            <h6>(Design and Developement)</h6>
+          </div>
+          <div class="testimonial__body">
+            <p>
+              Hello I'm Satabdisundar Behera. I've handled the UI design and
+              developement part of this project called 'Rental Room Management
+              System'.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="swiper-pagination test_pagination"></div>
+    </section>
+  </section>
+
+  <section class="footer__section">
+    <div class="fImage">
+      <img src="./Images/projectLogo.png" height="42" alt="" />
+    </div>
+    <div class="footer__links">
+      <h3>
+        Gandhi Institute for Education & Technology, Baniatangi, Khordha
+      </h3>
+      <div class="footer__copyright">
+        <small>Copyright &copy; CSE, Group-IV, (2020-2024)</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- swiper js javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

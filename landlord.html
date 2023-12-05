@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="landlord.css">
+    <script src="landlord.js" defer></script>
+</head>
+<body>
+    <section class="top">
+        <header class="header">
+          <nav class="navbar">
+            <div class="logo">
+              <img src="./Images/projectLogo.png" alt="" height="42" />
+            </div>
+            <div class="logout-section">
+              <div class="user-image" onclick="openModal()">
+                <img src="./Images/user.png" alt="" height="42" />
+              </div>
+              <div class="logout" onclick="openModal2()">
+                <button>
+                  Logout <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <h1>Rent kab doge beta...?</h1>
+      </section>
+      <!-- pop up modal -->
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Update Profile</h3>
+          <div>
+            <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
+          </div>
+        </div>
+        <div class="profile-photo-container">
+          <div class="view-img">
+            <img src="./Images/user.png" height="100" alt="" />
+          </div>
+  
+          <div class="choose-img">
+            <button><i class="fa-solid fa-camera"></i></button>
+            <input type="file" name="" id="" accept="image/*" hidden />
+          </div>
+        </div>
+  
+        <div class="info-edit">
+          <div class="newName info-edit-input">
+            <label for="newName">Edit Name</label>
+            <input type="text" name="newName" id="newName">
+            <i class="fa-solid fa-pencil info-edit-icon"></i>
+          </div>
+          <div class="newNumber info-edit-input">
+            <label for="newNumber">Edit Phone Number</label>
+            <input type="number" name="newNumber" id="newNumber">
+            <i class="fa-solid fa-pencil info-edit-icon"></i>
+          </div>
+          <div class="newEmail info-edit-input">
+            <label for="newEmail">Edit Email Address</label>
+            <input type="text" name="newEmail" id="newEmail">
+            <i class="fa-solid fa-pencil info-edit-icon"></i>
+          </div>
+          <div class="info-edit-update">
+            <p>Update</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Overlay  -->
+      <div onclick="closeModal()" class="overlay"></div>
+  
+      <!-- pop up modal 2 -->
+      <div class="modal2">
+        <h2>Log Out</h2>
+        <p>Are you sure you want to log out?</p>
+        <div class="final-logout">
+          <button onclick="closeModal2()" class="No-logout">No</button>
+          <button class="Yes-logout"><a href="#">Yes</a></button>
+        </div>
+      </div>
+      <div onclick="closeModal2()" class="overlay2"></div>
+</body>
+</html>

@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,700;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+.top {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./Images/landlordTop2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  margin-top: 1rem;
+  z-index: 50;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 0.7rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.sbtn2 {
+  display: none;
+}
+.navbar .logout-section {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navbar .logout-section .user-image {
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .logout-section .user-image img{
+  border-radius: 50%;
+}
+.navbar .logout-section .logout button {
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.3rem;
+  background-color: #ff8001;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.navbar .logout-section .logout button:hover {
+  background: #ff530a;
+}
+
+.navbar .logout-section .logout button:active {
+  transform: scale(0.9);
+}
+
+.top h1{
+    font-size: 5rem;
+    color: white;
+}
+/* pop up modal */
+.modal {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 90%;
+    max-width: 400px;
+    scale: 0;
+    background: #00000088;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+  }
+  .modal2 {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 90%;
+    max-width: 400px;
+    scale: 0;
+    background: #00000088;
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal2 h2{
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ffffff88;
+    width: 100%;
+    text-align: center;
+  }
+  .modal2 p{
+    margin-top: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .modal2 .final-logout{
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .modal2 .final-logout button{
+    border: none;
+    outline: none;
+    width: 45%;
+    background: #ff8001;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .modal2 .final-logout .Yes-logout a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+  }
+  .modal2 .final-logout .Yes-logout:hover{
+    background: #ff530a;
+  }
+  .modal2 .final-logout .Yes-logout:active{
+    scale: 0.9;
+  }
+  .modal2 .final-logout .No-logout{
+    background: #fff;
+    color: black;
+  }
+  .modal2 .final-logout .No-logout:hover{
+    background: #ededed;
+  }
+  .modal2 .final-logout .No-logout:active{
+    scale: 0.9;
+  }
+  
+  .modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ffffff88;
+  }
+  .modal-header div i {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .profile-photo-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .view-img{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .view-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  .choose-img{
+    position: absolute;
+    top: 55%;
+    left: 48%;
+    width: 20%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+  .choose-img button{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .choose-img button i{
+    opacity: 70%;
+  }
+  .info-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .info-edit .info-edit-input{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 0.7rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin-top: 1.5rem;
+  }
+  .info-edit .info-edit-input label{
+    position: absolute;
+    left:  0;
+    top: -2rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .info-edit .info-edit-input input{
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 100%;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+  }
+  .info-edit-update{
+    display: flex;
+    padding: 0.3rem 0.3rem;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    background-color: #ff8001;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .info-edit-update:hover {
+    background-color: #ff530a;
+  }
+  .info-edit-update:active {
+    scale: 0.9;
+  }
+  
+  .overlay {
+    overflow-x: hidden;
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -4;
+    transition: 0.5s ease-in-out;
+  }
+  .overlay2 {
+    overflow-x: hidden;
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -4;
+    transition: 0.5s ease-in-out;
+  }
+
+  
+  /* Make it to Responsive */
+@media screen and (max-width: 1080px) {
+    .navbar .logout-section {
+      width: 20%;
+      justify-content: space-between;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .navbar .logout-section {
+      min-width: 20%;
+      justify-content: space-between;
+    }
+    .navbar {
+      height: 4rem;
+    }
+    .navbar .logo img {
+      height: 30px;
+    }
+    .navbar .logout-section .user-image img {
+      height: 35px;
+    }
+    .navbar .logout-section .logout button {
+      padding: 0.38rem 0.7rem;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .navbar .logout-section {
+      min-width: 25%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .navbar .logout-section {
+      min-width: 31%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      display: none;
+    }
+    .navbar .logout-section {
+      min-width: 100%;
+      justify-content: space-between;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .info-edit-update{
+      width: 40%;
+    }
+    .info-edit .info-edit-input label{
+      font-size: 0.8rem;
+      top: -1.5rem;
+    }
+    .choose-img button{
+      font-size: 1.7rem;
+    }
+    .modal2 p{
+      font-size: 0.8rem;
+    }
+  }
